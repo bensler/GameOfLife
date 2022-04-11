@@ -14,12 +14,13 @@ public class GameOfLife extends JPanel {
 
   private final int rowCount;
   private final int colCount;
-	private final StateOfTheWorld state;
+
+	private Grid state;
 
   public GameOfLife(int rows, int cols, Grid grid) {
     rowCount = rows;
     colCount = cols;
-    state = new StateOfTheWorld(grid);
+    state = grid;
     setBackground(Color.white);
     setOpaque(true);
   }
@@ -51,6 +52,11 @@ public class GameOfLife extends JPanel {
       (colCount * GRID_SIZE) + GAP_SIZE,
       (rowCount * GRID_SIZE) + GAP_SIZE
     );
+  }
+
+  public void stepForward() {
+    state = state.createNextGeneration();
+    repaint();
   }
 
 }
