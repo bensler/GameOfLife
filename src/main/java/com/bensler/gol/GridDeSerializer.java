@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.List;
 
+/**
+ * Deserializes a {@link Grid} from and serializes it into a String representation.
+ * <p>
+ * Living cells are represented by a <code>X</code> (case insensitive), dead cells by
+ * a <code>.</code> (or any other character when reading).
+ */
 public class GridDeSerializer {
 
   public final static char LIVING_CELL = 'X';

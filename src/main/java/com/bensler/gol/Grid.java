@@ -5,6 +5,7 @@ import java.util.BitSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/** World model. Immutable. */
 public class Grid {
 
   private final int columnCount;

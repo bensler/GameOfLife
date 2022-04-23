@@ -6,7 +6,8 @@ import java.awt.Graphics;
 
 import javax.swing.JPanel;
 
-public class GameOfLife extends JPanel {
+/** Displays a {@link Grid}. */
+public class GridPanel extends JPanel {
 
   public final static int CELL_SIZE = 40;
   public final static int GAP_SIZE = 5;
@@ -17,7 +18,7 @@ public class GameOfLife extends JPanel {
 
 	private Grid state;
 
-  public GameOfLife(int rows, int cols, Grid grid) {
+  public GridPanel(int rows, int cols, Grid grid) {
     rowCount = rows;
     colCount = cols;
     state = grid;

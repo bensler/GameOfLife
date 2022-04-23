@@ -1,16 +1,12 @@
 package com.bensler.gol;
 
-import javax.swing.JButton;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import com.jgoodies.forms.layout.CellConstraints;
-import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.looks.plastic.Plastic3DLookAndFeel;
 import com.jgoodies.looks.plastic.theme.DesertYellow;
 
+/** App entry point. */
 public class Main {
 
   public final static String[] STATIC_1 = new String[] {
@@ -148,21 +144,6 @@ public class Main {
     "...X..X...",
     "..........",
   };
-
-  public static class AppPanel extends JPanel {
-    AppPanel() {
-      super(new FormLayout(
-        "f:p:g, 4dlu, p", // columns
-        "f:p:g"           // row
-      ));
-      final GameOfLife gameOfLife = new GameOfLife(20, 20, new GridDeSerializer().gridFromString(PULSATOR));
-      final JButton stepForwardButton = new JButton("Step");
-
-      stepForwardButton.addActionListener(actionEvent -> gameOfLife.stepForward());
-      add(new JScrollPane(gameOfLife), new CellConstraints(1, 1));
-      add(stepForwardButton, new CellConstraints().rc(1, 3, "top, d"));
-    }
-  }
 
   public static void main(String[] args) throws UnsupportedLookAndFeelException {
     Plastic3DLookAndFeel.setCurrentTheme(new DesertYellow());
