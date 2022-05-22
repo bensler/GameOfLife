@@ -145,6 +145,14 @@ public class Main {
     "..........",
   };
 
+  public final static String[] GLIDER = new String[] {
+      ".....",
+      "..X..",
+      "...X.",
+      ".XXX.",
+      ".....",
+  };
+
   public static void main(String[] args) throws UnsupportedLookAndFeelException {
     Plastic3DLookAndFeel.setCurrentTheme(new DesertYellow());
     UIManager.setLookAndFeel(new Plastic3DLookAndFeel());
